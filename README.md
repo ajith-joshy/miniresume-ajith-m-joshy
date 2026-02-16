@@ -3,17 +3,25 @@ Mini Resume Management API:
 This is a Mini Resume Collector REST API built using Django and Django REST Framework.
 
 The application allows:
+
 -Uploading resumes (PDF/DOC/DOCX)
+
 -Storing candidate metadata in memory
+
 -Filtering candidates by skill, experience, and graduation year
+
 -Retrieving and deleting candidates
+
 -Health check endpoint for service monitoring
+
 -No database is used. Data is stored in memory during runtime.
 
 #Python Version - Python 3.11.9
 
 #Installation steps
+
 1️) Clone the Repository
+
 git clone https://github.com/your-username/miniresume-ajith-m-joshy.git
 
 cd miniresume-ajith-m-joshy
@@ -35,37 +43,56 @@ pip install -r requirements.txt
 
 #Running the Application 
 1) python manage.py runserver
+
 The application will start at:
 http://127.0.0.1:8000/ 
 
 2) Health Check Endpoint
 This endpoint verifies that the application is running properly.
+
 Endpoint:
 GET /health
+
 Example Response:
+
 {
+
     "status": "ok"
+
 }
 Status Code:
 200 OK
 
 3) Upload Candidate (Create)
+
 Endpoint:
 POST /candidates/
+
 Content Type:
 multipart/form-data
+
 Required Fields:
+
 full_name
+
 dob (Format: YYYY-MM-DD)
+
 contact_number
+
 contact_address
+
 education_qualification
+
 graduation_year
+
 years_of_experience
+
 skill_set (comma separated values)
+
 resume (PDF/DOC/DOCX file)
 
 Example Request (Form Data):
+
 full_name = Ajith Joshy
 dob = 2003-02-25
 contact_number = 8281882309
