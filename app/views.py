@@ -4,16 +4,18 @@ from rest_framework.response import Response
 from .serializers import CandidateSerializer
 from django.conf import settings
 
-from rest_framework.decorators import api_view
+# In-memory storage
+candidates_db = {}
 
+if not os.path.exists(settings.MEDIA_ROOT):
+    os.makedirs(settings.MEDIA_ROOT)
+identity=1
+
+from rest_framework.decorators import api_view
 @api_view(["GET"])
 def health(request):
     return Response({"status": "ok"}, status=200)
 
-# In-memory storage
-candidates_db = {}
-
-identity=1
 class CandidateViewSet(viewsets.ViewSet):
     serializer_class = CandidateSerializer
 
@@ -89,6 +91,7 @@ class CandidateViewSet(viewsets.ViewSet):
         candidate = candidates_db.pop(pk, None)
         if not candidate:
             return Response({"error": "Not found"}, status=404)
-        if os.path.exists(candidate["resume"]):
-            os.remove(candidate["resume"])
+        file_path=candidate["resume"]
+        if os.path.exists(file_path):
+            os.remove(file_path)
         return Response({"message": "Deleted successfully"})
