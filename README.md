@@ -1,6 +1,6 @@
 Mini Resume Management API:
 
-This is a Mini Resume Collector REST API built using Django and Django REST Framework.
+This is a Mini Resume Collector REST API built using Django and Django REST Framework(as allowed in assignment FastAPI or Django).
 
 The application allows:
 
