@@ -22,7 +22,7 @@ The application allows:
 
 1️) Clone the Repository
 
-git clone https://github.com/your-username/miniresume-ajith-m-joshy.git
+git clone https://github.com/ajith-joshy/miniresume-ajith-m-joshy.git
 
 cd miniresume-ajith-m-joshy
 
