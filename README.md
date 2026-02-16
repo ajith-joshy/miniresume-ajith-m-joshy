@@ -15,14 +15,21 @@ The application allows:
 #Installation steps
 1️) Clone the Repository
 git clone https://github.com/your-username/miniresume-ajith-m-joshy.git
+
 cd miniresume-ajith-m-joshy
+
 2️) Create Virtual Environment
+
 python -m venv venv 
+
 3)Activate Virtual Environment
+
 Windows:
 venv\Scripts\activate
+
 Mac/Linux:
 source venv/bin/activate
+
 4️) Install Dependencies
 pip install -r requirements.txt
 
