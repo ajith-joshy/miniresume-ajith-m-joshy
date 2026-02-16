@@ -14,7 +14,7 @@ The application allows:
 
 #Installation steps
 1️) Clone the Repository
-git clone https://github.com/your-username/miniresume-your-full-name.git
+git clone https://github.com/your-username/miniresume-ajith-m-joshy.git
 cd miniresume-ajith-m-joshy
 2️) Create Virtual Environment
 python -m venv venv 
