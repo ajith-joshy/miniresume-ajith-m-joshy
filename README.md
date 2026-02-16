@@ -39,15 +39,18 @@ Mac/Linux:
 source venv/bin/activate
 
 4️) Install Dependencies
+
 pip install -r requirements.txt
 
 #Running the Application 
+
 1) python manage.py runserver
 
 The application will start at:
 http://127.0.0.1:8000/ 
 
 2) Health Check Endpoint
+
 This endpoint verifies that the application is running properly.
 
 Endpoint:
@@ -120,14 +123,17 @@ Example Response:
     ],
     "resume": "uploads/Resume.pdf"
 }
+
 Status Code:
 201 Created
 
 4) List Candidates
+
 Endpoint:
 GET /candidates/
 
 Example Response:
+
 [
     {
         "id": 1,
@@ -144,7 +150,9 @@ Example Response:
 ]
 
 5) Filter Candidates
+
 You can filter using query parameters.
+
 Filter by Skill:
 GET /candidates/?skill=python
 
@@ -158,6 +166,7 @@ Multiple Filters Together:
 GET /candidates/?skill=python&experience=1
 
 If no candidates match:
+
 {
     "message": "No candidates found"
 }
