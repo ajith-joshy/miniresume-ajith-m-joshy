@@ -40,6 +40,7 @@ source venv/bin/activate
 
 4️) Install Dependencies
 
+
 pip install -r requirements.txt
 
 #Running the Application 
@@ -63,6 +64,7 @@ Example Response:
     "status": "ok"
 
 }
+
 Status Code:
 200 OK
 
